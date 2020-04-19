@@ -1,0 +1,50 @@
+<ion-header class="header">
+  <ion-navbar>
+    <ion-buttons>
+      <button ion-button icon-only start (click)="mostratMenu()">
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+    <h1 text-center style="color:#fff">Leyes Argentinas</h1>
+    <img src="assets/img/header-leyes.jpg" alt="">
+    <p style="color:#fff">Dejamos a tu disposición una serie de documentos con leyes argentinas:</p>
+    <ion-list>
+        <ion-item>
+            <ion-avatar item-start>
+                <img src="assets/img/leyes.png" alt="">
+            </ion-avatar>
+            <h2 (click)="abrirpdf('cod1')">Código penal de la republica de argentina</h2>
+        </ion-item>
+        <ion-item>
+            <ion-avatar item-start>
+                <img src="assets/img/leyes.png" alt="">
+            </ion-avatar>
+            <h2 (click)="abrirpdf('cod2')">Código Civil y comercial</h2>
+        </ion-item>
+        <ion-item>
+            <ion-avatar item-start>
+                <img src="assets/img/leyes.png" alt="">
+            </ion-avatar>
+            <h2 (click)="abrirpdf('cod3')">Constitución nacional</h2>
+        </ion-item>
+        <ion-item>
+            <ion-avatar item-start>
+                <img src="assets/img/leyes.png" alt="">
+            </ion-avatar>
+            <h2 (click)="abrirpdf('cod4')">Código Procesal Penal de la Nación</h2>
+        </ion-item>
+        <ion-item>
+            <ion-avatar item-start>
+                <img src="assets/img/leyes.png" alt="">
+            </ion-avatar>
+            <h2 (click)="abrirpdf('cod5')">Código Procesal Penal de la Prov de Bs As</h2>
+        </ion-item>
+
+    </ion-list>
+
+</ion-content>

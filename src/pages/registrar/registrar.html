@@ -1,0 +1,46 @@
+
+<ion-content padding>
+	<h1 text-center>Registro</h1>
+	<hr>
+	<ion-list>
+
+	  <ion-item>
+	    <ion-input placeholder="* Correo electronico" required="true" type="email" [(ngModel)]="email"></ion-input>
+	  </ion-item>
+
+	  <ion-item>
+	    <ion-input placeholder="* Contraseña" required="true" type="password" [(ngModel)]="password"></ion-input>
+	  </ion-item>
+
+	  <ion-item>
+	    <ion-input placeholder="* Nombre completo" required="true" type="text" [(ngModel)]="nombre"></ion-input>
+	  </ion-item>
+
+	  <ion-item>
+	    <ion-input placeholder="Dirección(Opcinal)" type="text" [(ngModel)]="direccion"></ion-input>
+	  </ion-item>
+
+	  <ion-item>
+	    <ion-input placeholder="* Telefono" type="number" [(ngModel)]="telefono"></ion-input>
+	  </ion-item>
+
+	  <ion-item>
+	    <ion-input placeholder="DNI(Opcional)" type="text" [(ngModel)]="dni"></ion-input>
+	  </ion-item>
+
+	  <button ion-button full color="white" block (click)="registrar()"
+	  [disabled]="email.length < 5 || password.length <5 || nombre.length <3"
+
+	  >Registrar</button>
+	</ion-list>
+	<ion-fab right bottom>
+    	<button ion-fab color="white" (click)="regresar()">
+    		<ion-icon name="arrow-back" id="back"></ion-icon>
+    	</button>
+  	</ion-fab>
+</ion-content>
+
+<ion-footer style="color:#fff" padding>
+	<p>Los campos indicados con * son obligatorios.</p>
+	<p>Los campos como <strong>DNI & Dirección</strong> son opcionales para el registro.</p>
+</ion-footer>

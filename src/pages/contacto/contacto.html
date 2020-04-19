@@ -1,0 +1,42 @@
+<ion-content padding>
+    <h1 text-center style="color:#fff">Contacta con tu Abogado</h1>
+    <hr>
+    <img src="assets/img/contacto.jpg" alt="">
+    <h4 style="color:#fff" text-center>
+        Al cerrar esta ventana podrás calificar el servicio recibido por tu abogado.
+    </h4>
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+                <a ion-button full href="https://api.whatsapp.com/send?phone=54{{abogado.telefono}}&text=Bienvenido a la plataforma de Abogados en red un cliente desea contactar sus servicios:">WhatsApp</a>
+            </ion-col>
+            <ion-col>
+                <a ion-button full href="tel:54{{abogado.telefono}}">Llamar</a>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+    <!-- <ion-list>
+        <ion-item>
+            <ion-input required="true" type="text" placeholder="Indicar tema de la consulta" [(ngModel)]="consulta"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-input required="true" type="text" placeholder="Indica comentarios adicionales para facilitar tu consulta" [(ngModel)]="comentarios"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-input required="true" type="number" placeholder="Califica a tu abogado del 1 al 5" min="1" max="5" value="1" [(ngModel)]="valoracion"></ion-input>
+        </ion-item>
+        <ion-item>
+            <button ion-button block color="primary" (click)="enviar_consulta()" [disabled]="consulta.length < 5 || comentarios.length <5 || valoracion.value <5">
+	    	Enviar consulta
+	    </button>
+        </ion-item>
+    </ion-list> -->
+
+    <ion-fab right bottom>
+        <button ion-fab color="white" (click)="regresar()">
+             <ion-icon name="close"></ion-icon>
+        </button>
+    </ion-fab>
+
+</ion-content>

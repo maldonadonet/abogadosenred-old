@@ -1,0 +1,17 @@
+page-abogados {
+    h1 {
+        color: #fff;
+    }
+    img {
+        width: 100%;
+    }
+    ion-col {
+        .descripcion {
+            height: 80px;
+            overflow: hidden;
+            white-space: wrap;
+            text-overflow: ellipsis;
+            text-align: justify;
+        }
+    }
+}

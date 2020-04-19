@@ -1,0 +1,43 @@
+<ion-content padding>
+	<hr>
+	<div text-center>
+		<img src="assets/img/logo.png" class="logo">
+	</div>
+	<ion-list>
+
+	  <ion-item>
+	    <ion-label stacked>Correo Electronico</ion-label>
+	    <ion-input type="email" [(ngModel)]="email"></ion-input>
+	  </ion-item>
+
+	  <ion-item>
+	    <ion-label stacked>Contraseña</ion-label>
+	    <ion-input type="password" [(ngModel)]="password"></ion-input>
+	  </ion-item>
+
+	  <button
+	  		ion-button
+	  		full color="white"
+	  		[disabled]="false"
+            (click)="ingresar()">
+	  	Iniciar
+	  </button>
+	</ion-list>
+	<ion-grid>
+		<ion-row>
+			<ion-col col-md-6>
+				<ion-checkbox (ionChange)="guardar_datos()"></ion-checkbox><span style="color:#fff;margin-left: 2px">Recordar usuario</span>	
+			</ion-col>
+			<ion-col col-md-6>
+				<a (click)="recuperar_cuenta()" style="color:#fff">Recuperar contraseña</a>			
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+	
+	<ion-fab right bottom>
+    	<button ion-fab color="white" (click)="regresar()">
+    		<ion-icon name="arrow-back" id="back"></ion-icon>
+    	</button>
+  	</ion-fab>
+</ion-content>
+

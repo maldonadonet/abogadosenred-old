@@ -1,0 +1,38 @@
+<ion-menu [content]="content" id="myMenu">
+    <ion-header>
+        <ion-toolbar>
+            <div id="div-header">
+                <img id="logo" src="assets/img/logo.png">
+            </div>
+        </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+        <ion-list>
+            <button ion-item (click)="openPage( homepage )">
+            <ion-icon name="search"></ion-icon>
+                Inicio
+            </button>
+            <button ion-item (click)="openPage( leyes )">
+            <ion-icon name="book"></ion-icon>
+                Leyes argentinas
+            </button>
+            <button ion-item (click)="info()">
+            <ion-icon name="ios-information-circle-outline"></ion-icon>
+                Contacto
+            </button>
+            <button ion-item (click)="openPage( salir )">
+            <ion-icon name="exit"></ion-icon>
+                Salir
+            </button>
+        </ion-list>
+    </ion-content>
+    <ion-footer>
+        <a color="ligth" (click)="mostrar()">Terminos y condiciones</a>
+    </ion-footer>
+
+</ion-menu>
+
+
+<ion-nav [root]="rootPage" #content>
+</ion-nav>

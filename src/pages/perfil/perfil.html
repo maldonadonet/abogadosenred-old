@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{perfil.nombre}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+	<ion-grid>
+		<ion-row id="box">
+			<ion-col md-12 id="innerContent">
+				<img src="{{rutaimg}}{{perfil.foto}}" alt="foto perfil" width="100%" height="300">
+			</ion-col>
+		</ion-row>
+		<ion-row>
+			<ion-col md-12>
+				<h1 text-center>{{perfil.nombre}}</h1>
+				<h2 style="color:#fff" text-center>
+					Calificacion: <br>
+					<strong style="color:#fff">{{_us.calificacionprom}}</strong>
+				</h2>
+			</ion-col>
+		</ion-row>
+		<ion-row>
+			<ion-col md-12>
+				<h2 text-center>Experiencia laboral</h2>
+				<div class="main">
+					{{perfil.descripcion}}
+				</div>
+			</ion-col>
+		</ion-row>
+		<ion-row>
+			<ion-col md-12>
+				<h2 text-center>Especialidades</h2>
+				<div class="especialidades">
+					<ion-list>
+					  <ion-item-sliding *ngFor="let item of nombres">
+					    <ion-item>
+					      <ion-avatar item-start>
+					        <ion-icon ios="ios-bulb" md="md-bulb"></ion-icon>
+					      </ion-avatar>
+					      <h3>{{item}}</h3>
+					    </ion-item>
+					  </ion-item-sliding>
+					</ion-list>
+				</div>
+			</ion-col>
+		</ion-row>
+		<ion-row>
+			<ion-col md-12>
+				
+			</ion-col>
+		</ion-row>
+		<ion-row>
+			<ion-col md-12>
+				<h2 text-center>Contacto</h2>
+				<ion-row>
+					<button ion-button block color="" (click)="mostrar_modal()">
+						Contacto
+					</button>
+					<!-- <ion-col>
+						<a ion-button full href="https://api.whatsapp.com/send?phone=52{{perfil.telefono}}&text=Bienvenido a la plataforma de Abogados en red un cliente desea contactar sus servicios:">WhatsApp</a>
+					</ion-col>
+					<ion-col>
+						<a ion-button full href="tel:{{perfil.telefono}}">Llamar</a>
+					</ion-col> -->
+				</ion-row> 
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+</ion-content>
